@@ -1,0 +1,523 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanif & Iqbal shuttering Patti</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    * {
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .hero-bg {
+      background: linear-gradient(to right, #ffffff 0%, #f3f3f3 100%);
+    }
+
+    .nav-link.active {
+      color: #f59e0b;
+      position: relative;
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background: #f59e0b;
+    }
+
+    .black-gradient {
+      background: linear-gradient(to right, #000000, #111111, #000000);
+    }
+
+    .orange-text {
+      color: #f59e0b;
+    }
+
+    .orange-bg {
+      background: #f59e0b;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: #f59e0b;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      border-radius: 20px;
+    }
+
+    .card-hover {
+      transition: 0.3s;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery img {
+      transition: 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="black-gradient text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-3">
+        <div class="text-3xl text-orange-500">
+          <i class="fa-solid fa-industry"></i>
+        </div>
+
+        <div>
+          <h1 class="font-bold text-2xl">
+            Hanif & Iqbal <span class="orange-text">SHUTTERING</span> PATTI
+          </h1>
+          <p class="text-xs tracking-[3px] text-gray-300">
+            INDUSTRIES
+          </p>
+        </div>
+      </div>
+
+      <!-- MENU -->
+      <nav class="hidden md:flex gap-10 font-medium text-sm">
+        <a href="#home" class="nav-link hover:text-orange-400 duration-300">HOME</a>
+        <a href="#about" class="nav-link hover:text-orange-400 duration-300">ABOUT</a>
+        <a href="#products" class="nav-link hover:text-orange-400 duration-300">PRODUCTS</a>
+        <a href="#gallery" class="nav-link hover:text-orange-400 duration-300">GALLERY</a>
+        <a href="#contact" class="nav-link hover:text-orange-400 duration-300">CONTACT</a>
+      </nav>
+      <!-- PHONE -->
+      <div class="hidden md:flex items-center gap-2">
+        <i class="fa-solid fa-phone orange-text"></i>
+        <span>+92 3212141292</span>
+        <span>+92 3212112602</span>
+      </div>
+
+      <!-- MOBILE BTN -->
+      <button id="menuBtn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="md:hidden bg-black overflow-hidden max-h-0 transition-all duration-500">
+      <div class="px-6 py-5 flex flex-col gap-4">
+        <a href="#home" class="block py-2">HOME</a>
+        <a href="#about" class="block py-2">ABOUT</a>
+        <a href="#products" class="block py-2">PRODUCTS</a>
+        <a href="#gallery" class="block py-2">GALLERY</a>
+        <a href="#contact" class="block py-2">CONTACT</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero-bg min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+
+      <!-- TEXT -->
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight ">
+          PREMIUM <br />
+          <span class="orange-text">SHUTTERING PATTI</span> <br />
+          MANUFACTURER
+        </h1>
+
+        <p class="mt-6 text-lg text-gray-600 leading-9">
+          High-quality steel shuttering pattis for RCC columns,
+          beams, slabs & construction formwork solutions.
+        </p>
+
+        <div class="mt-8 flex gap-4">
+          <a href="#contact"
+            class="orange-bg hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold duration-300">
+            GET QUOTE
+          </a>
+
+          <a href="#products"
+            class="border-2 border-gray-400 hover:border-orange-500 hover:text-orange-500 px-8 py-4 rounded font-semibold duration-300 inline-block">
+            VIEW PRODUCTS
+          </a>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div>
+        <img src="images/hero_product_bundle.png" class="w-full rounded-xl shadow-2xl" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <img src="images/about_machine.png" class="rounded-xl shadow-xl" alt="" />
+      </div>
+
+      <div>
+        <div class="relative inline-block mb-10">
+          <h2 class="text-5xl font-bold section-title">
+            ABOUT US
+          </h2>
+        </div>
+
+        <p class="text-gray-600 leading-9 mb-6">
+          We are a trusted manufacturer and supplier of high-quality
+          shuttering pattis used in modern construction projects.
+          Our products are widely used in RCC column shuttering,
+          beam support systems, slab formwork, and building
+          construction.
+        </p>
+
+        <p class="text-gray-600 leading-9">
+          With durable material, precise finishing, and reliable
+          strength, our shuttering pattis help contractors and
+          builders achieve strong and accurate concrete structures.
+        </p>
+
+        <!-- STATS -->
+        <div class="grid grid-cols-3 gap-6 mt-12">
+
+          <div class="text-center">
+            <div class="text-4xl orange-text mb-3">
+              <i class="fa-solid fa-shield"></i>
+            </div>
+            <h3 class="font-bold text-3xl">30+</h3>
+            <p class="text-sm text-gray-500">Years Experience</p>
+          </div>
+
+          <div class="text-center">
+            <div class="text-4xl orange-text mb-3">
+              <i class="fa-solid fa-box"></i>
+            </div>
+            <h3 class="font-bold text-3xl">600+</h3>
+            <p class="text-sm text-gray-500">Projects Supply</p>
+          </div>
+
+          <div class="text-center">
+            <div class="text-4xl orange-text mb-3">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="font-bold text-3xl">100%</h3>
+            <p class="text-sm text-gray-500">Customer Satisfaction</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="relative inline-block mb-16">
+        <h2 class="text-5xl font-bold section-title">
+          OUR PRODUCTS
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+          <img src="images/product_1.png" class="h-44 w-full object-cover" />
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-2">
+              Steel Shuttering Patti
+            </h3>
+            <p class="text-gray-500 text-sm">
+              Heavy-duty steel pattis for strong RCC shuttering support.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+          <img src="images/product_2.png" class="h-44 w-full object-cover" />
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-2">
+              Column Patti
+            </h3>
+            <p class="text-gray-500 text-sm">
+              Perfectly finished pattis specially designed for building pillars.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+          <img src="images/product_3.png" class="h-44 w-full object-cover" />
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-2">
+              Formwork Patti
+            </h3>
+            <p class="text-gray-500 text-sm">
+              Reliable formwork solutions for slabs, beams & industrial projects.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+          <img src="images/product_4.png" class="h-44 w-full object-cover" />
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-2">
+              Beam Shuttering Patti
+            </h3>
+            <p class="text-gray-500 text-sm">
+              High strength pattis for beams and construction framing.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+          <img src="images/product_5.png" class="h-44 w-full object-cover" />
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-2">
+              Customized Patti
+            </h3>
+            <p class="text-gray-500 text-sm">
+              All sizes available as per customer requirements.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="black-gradient py-24 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="relative inline-block mb-16">
+        <h2 class="text-5xl font-bold section-title">
+          WHY CHOOSE US
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-10">
+
+        <div class="text-center">
+          <i class="fa-solid fa-shield text-5xl text-orange-500 mb-5"></i>
+          <h3 class="font-semibold text-xl mb-3">Premium Quality</h3>
+          <p class="text-gray-300 text-sm">
+            Strong and durable steel products with accurate finishing.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <i class="fa-solid fa-layer-group text-5xl text-orange-500 mb-5"></i>
+          <h3 class="font-semibold text-xl mb-3">Bulk Supply</h3>
+          <p class="text-gray-300 text-sm">
+            Large quantity production for contractors and companies.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <i class="fa-solid fa-truck text-5xl text-orange-500 mb-5"></i>
+          <h3 class="font-semibold text-xl mb-3">Fast Delivery</h3>
+          <p class="text-gray-300 text-sm">
+            Timely delivery services with customer satisfaction priority.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <i class="fa-solid fa-shield-halved text-5xl text-orange-500 mb-5"></i>
+          <h3 class="font-semibold text-xl mb-3">Rust Resistant</h3>
+          <p class="text-gray-300 text-sm">
+            High-quality material with long lasting finish.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <i class="fa-solid fa-gear text-5xl text-orange-500 mb-5"></i>
+          <h3 class="font-semibold text-xl mb-3">Accurate Cutting</h3>
+          <p class="text-gray-300 text-sm">
+            Precision cutting in all sizes for construction support.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <i class="fa-solid fa-tags text-5xl text-orange-500 mb-5"></i>
+          <h3 class="font-semibold text-xl mb-3">Affordable Rates</h3>
+          <p class="text-gray-300 text-sm">
+            Best quality products at affordable prices.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="relative inline-block mb-16">
+        <h2 class="text-5xl font-bold section-title">
+          FACTORY GALLERY
+        </h2>
+      </div>
+
+      <div class="gallery grid md:grid-cols-2 lg:grid-cols-4 gap-5 place-items-center">
+
+        <img src="images/gallery_1.png" class="gallery-img rounded-xl h-56 w-full object-cover cursor-pointer" />
+
+        <img src="images/gallery_2.png" class="gallery-img rounded-xl h-56 w-full object-cover cursor-pointer" />
+
+        <img src="images/gallery_4.png" class="gallery-img rounded-xl h-56 w-full object-cover cursor-pointer" />
+
+        <img src="images/gallery_5.png" class="gallery-img rounded-xl h-56 w-full object-cover cursor-pointer" />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+
+      <!-- LEFT -->
+      <div>
+        <div class="relative inline-block mb-12">
+          <h2 class="text-5xl font-bold section-title">
+            CONTACT US
+          </h2>
+        </div>
+
+        <p class="text-gray-600 leading-8 mb-10">
+          Contact us for bulk orders, pricing, and customized
+          shuttering patti requirements.
+        </p>
+
+        <div class="space-y-6 mb-7">
+
+          <div class="flex gap-4 items-center">
+            <i class="fa-solid fa-phone text-orange-500 text-xl"></i>
+            <span>+92 3212141292</span>
+            <span>+92 3212112602</span>
+          </div>
+
+          <div class="flex gap-4 items-center">
+            <i class="fa-solid fa-envelope text-orange-500 text-xl"></i>
+            <span>info@hanifiqbalstepatti.com</span>
+          </div>
+
+          <div class="flex gap-4 items-center">
+            <i class="fa-solid fa-location-dot text-orange-500 text-xl"></i>
+            <span>Karachi, Pakistan</span>
+          </div>
+
+        </div>
+
+        <a href="https://wa.me/923092770093" target="_blank"
+          class="mt-10 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold duration-300">
+          <i class="fa-brands fa-whatsapp"></i>
+          WHATSAPP US
+        </a>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="bg-white shadow-xl rounded-2xl p-10">
+
+        <form id="contactForm" class="space-y-6">
+
+          <div class="grid md:grid-cols-2 gap-5">
+            <input type="text" name="user_name" placeholder="Your Name" required
+              class="border border-gray-300 rounded-lg px-5 py-4 outline-none focus:border-orange-500" />
+
+            <input type="email" name="user_email" placeholder="Your Email" required
+              class="border border-gray-300 rounded-lg px-5 py-4 outline-none focus:border-orange-500" />
+          </div>
+
+          <textarea rows="6" name="message" placeholder="Your Message" required
+            class="w-full border border-gray-300 rounded-lg px-5 py-4 outline-none focus:border-orange-500"></textarea>
+
+          <button type="submit"
+            class="orange-bg hover:bg-orange-600 text-white px-10 py-4 rounded-lg font-semibold duration-300">
+            SEND MESSAGE
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="black-gradient text-white py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+      <div>
+        <h2 class="font-bold text-2xl">
+          Hanif & Iqbal <span class="orange-text">SHUTTERING</span> PATTI
+        </h2>
+      </div>
+
+      <p class="text-sm text-gray-300">
+        © 2026 Hanif & Iqbal shuttering Patti. All Rights Reserved.
+      </p>
+
+      <div class="flex gap-5 text-xl">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/923092770093?text=Hello%20I%20want%20information%20about%20shuttering%20patti" target="_blank"
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl z-50 animate-bounce">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- IMAGE POPUP -->
+  <div id="imageModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50 p-5">
+    <button id="closeModal" class="absolute top-5 right-5 text-white text-4xl">
+      &times;
+    </button>
+
+    <img id="modalImg" class="max-w-full max-h-[90vh] rounded-xl shadow-2xl" />
+  </div>
+  <!-- JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
